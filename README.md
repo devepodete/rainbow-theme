@@ -1,5 +1,5 @@
 # rainbow-theme :rainbow:
-Fun rainbow theme for your ubuntu (maybe any linux distributives)
+Fun rainbow theme for Ubuntu.
 
 ## Install:
 Download this repository from github, for example by using ```git```
@@ -8,8 +8,12 @@ git clone https://github.com/devepodete/rainbow-theme/
 ```
 Execute initialization script with super user rights:
 ```bash
-sudo bash make-it-fun.sh
+sudo bash install.sh
 ```
+Reboot.
 
 ## Uninstall:
-```ToDo```
+```bash
+sudo bash uninstall.sh
+```
+Reboot.
