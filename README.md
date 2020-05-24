@@ -1,5 +1,5 @@
 # rainbow-theme :rainbow:
-Fun rainbow theme for Ubuntu.
+Fun rainbow theme for Ubuntu with GNOME.
 
 ## Install:
 Download this repository, for example by using ```git```
