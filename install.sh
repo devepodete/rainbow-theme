@@ -1,17 +1,32 @@
 #!/bin/bash
 
-FOLDER_NAME="Microsoft"
-
 if [ "$EUID" -ne 0 ]; then
     echo "Please run this script with sudo"
     exit
 fi
 
 goodOS="$(lsb_release -i | grep Ubuntu)"
-
 if [ -z "$goodOS" ]; then
     echo "Sorry, this script does not work on $goodOS"
     exit
+fi
+
+xgamma -q
+if [ $? -ne 0 ]; then
+    echo "Error: xgamma command not found"
+    echo "Trying to install..."
+    sudo apt install x11-xserver-utils
+else
+    echo "Info: xgamma command found"
+fi
+
+aplay > /dev/null
+if [ $? -ne 1 ]; then
+    echo "Error: aplay command not found"
+    echo "Exiting"
+    exit
+else
+    echo "Info: aplay command found"
 fi
 
 #check original username
