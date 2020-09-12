@@ -1,5 +1,3 @@
-#check for audio player
-
 if [ "$#" -ne 1 ]; then
     echo "Number of arguments not equal to 1. Exit."
     exit
