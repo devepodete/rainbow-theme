@@ -10,10 +10,6 @@ if [ -x "$(command -v aplay)" ]; then
     aplay $binPath/NyanCat.wav &
 fi
 
-if ! [ -x "$(command xgamma)" ]; then
-    exit
-fi
-
 applyColor(){
     if [ $1 -lt 1000 ]; then
         xgamma -rgamma "0.$1"
